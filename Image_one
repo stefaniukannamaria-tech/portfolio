@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Image</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="poster.png" alt="Image">
+</body>
+</html>
