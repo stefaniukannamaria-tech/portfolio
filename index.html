@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Image</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: white;
-        }
-
-        img {
-            max-width: 100%;
-            max-height: 100vh;
-            display: block;
-        }
-    </style>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
-    <img src="okladka_portfolio-01.png" alt="Image">
+  <model-viewer
+    src="model.glb"
+    alt="3D Model"
+    auto-rotate
+    camera-controls
+    style="width:100vw; height:100vh;">
+  </model-viewer>
 </body>
 </html>
