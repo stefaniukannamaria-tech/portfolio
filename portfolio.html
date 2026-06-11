@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>PDF Viewer</title>
     <style>
-        html, body {
+        body {
             margin: 0;
-            height: 100%;
-            overflow: hidden;
         }
 
-        .pdf-container {
+        iframe {
             width: 100vw;
             height: 100vh;
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
-        }
-
-        .pdf-container iframe {
-            width: 2000px; /* Increase if PDF pages get clipped */
-            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <iframe src="pedeefs/portfolio.pdf"></iframe>
-    </div>
+
+    <iframe src="pedeefs/portfolio.pdf"></iframe>
+
 </body>
 </html>
