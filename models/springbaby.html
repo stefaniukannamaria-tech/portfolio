@@ -2,14 +2,32 @@
 <html>
 <head>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+
+      background-image: url("background_images/background_springbaby.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+
+      background-color: transparent;
+    }
+  </style>
 </head>
+
 <body>
   <model-viewer
     src="springbaby.glb"
     alt="3D Model"
     auto-rotate
-    camera-controls
-    style="width:100vw; height:100vh;">
+    camera-controls>
   </model-viewer>
 </body>
 </html>
