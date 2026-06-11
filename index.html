@@ -1,0 +1,230 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Landing Page</title>
+
+<style>
+
+/* Remove browser margins */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main container */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Background image */
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Shared button settings */
+.button {
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ===== REGULAR BUTTONS ===== */
+
+#button1 {
+    left: 15%;
+    top: 25%;
+    width: 12%;
+}
+
+#button2 {
+    left: 75%;
+    top: 25%;
+    width: 12%;
+}
+
+/* ===== CAROUSEL ===== */
+
+#carousel {
+    position: absolute;
+
+    left: 50%;
+    top: 75%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Arrow buttons */
+.arrow {
+    width: 60px;
+    cursor: pointer;
+}
+
+/* Center content button */
+#contentButton {
+    width: 250px;
+    cursor: pointer;
+}
+
+#contentButton img {
+    width: 100%;
+    display: block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BACKGROUND -->
+    <img src="images/background.png" class="background">
+
+    <!-- REGULAR BUTTON 1 -->
+    <a href="aboutme.html">
+        <img src="images/button_AboutMe.png"
+             id="button1"
+             class="button">
+    </a>
+
+    <!-- REGULAR BUTTON 2 -->
+    <a href="portfolio.html">
+        <img src="images/button_Portfolio.png"
+             id="button2"
+             class="button">
+    </a>
+
+    <!-- CAROUSEL -->
+    <div id="carousel">
+
+        <img src="images/button_Previous.png"
+             id="prev"
+             class="arrow">
+
+        <a id="contentLink" href="#">
+            <div id="contentButton">
+                <img id="contentImage" src="">
+            </div>
+        </a>
+
+        <img src="images/button_Next.png"
+             id="next"
+             class="arrow">
+
+    </div>
+
+</div>
+
+<!-- CAROUSEL A --> 
+ <div id="carouselA"> 
+    <img id="prevA" src="images/prev.png"> 
+    <a id="linkA" href="#"> <img id="contentA" src=""> 
+    </a> 
+    <img id="nextA" src="images/next.png">
+ </div> 
+ <!-- CAROUSEL B --> 
+  <div id="carouselB"> 
+    <img id="prevB" src="images/prev.png">
+     <a id="linkB" href="#"> 
+        <img id="contentB" src="">
+     </a> 
+     <img id="nextB" src="images/next.png"> 
+    </div>
+     <!-- CAROUSEL C -->
+       <div id="carouselC"> 
+        <img id="prevC" src="images/prev.png"> 
+        <a id="linkC" href="#"> 
+            <img id="contentC" src=""> 
+        </a>
+         <img id="nextC" src="images/next.png"> 
+        </div>
+         <script> 
+         /* ------------------ */ /* Carousel A */ /* ------------------ */ 
+         const itemsA = 
+         [ 
+            { image: "images/button_games.png", link: "none" }, { image: "images/button_ThreeGraySisters.png", link: "ThreeGraySisters/index.html" },{ image: "images/button_ChickenFarm.png", link: "ChickenFarm/index.html" } 
+        ]; 
+         let currentA = 0; function updateA() 
+         {
+             document.getElementById("contentA").src = itemsA[currentA].image; document.getElementById("linkA").href = itemsA[currentA].link; 
+
+         }
+          document.getElementById("nextA").onclick = function() 
+          {
+             currentA = (currentA + 1) % itemsA.length; updateA();
+
+           };
+            document.getElementById("prevA").onclick = function() 
+            {
+             currentA--; if(currentA < 0) currentA = itemsA.length - 1; 
+             updateA();
+             };
+/* ------------------ */ /* Carousel B */ /* ------------------ */ 
+            const itemsB = [ 
+{ image: "images/button_videos.png", link: "none" }, 
+{ image: "images/button_Escargots.png", link: "videos/escargots.html" },
+{ image: "images/button_Line.png", link: "videos/line.html" },
+{ image: "images/button_Deadcrush.png", link: "videos/deadcrush.html" },
+{ image: "images/button_ChristmasFarFromHome.png", link: "videos/christmasfarfromhome.html" },
+{ image: "images/button_SilentNight.png", link: "videos/silentnight.html" }, 
+{ image: "images/button_Puppet.png", link: "videos/puppet.html" },
+
+            ];
+             let currentB = 0; function updateB() 
+             { 
+            document.getElementById("contentB").src = itemsB[currentB].image;
+            document.getElementById("linkB").href = itemsB[currentB].link; 
+              } 
+              document.getElementById("nextB").onclick = function() 
+              { 
+                currentB = (currentB + 1) % itemsB.length; updateB();
+               }; 
+               document.getElementById("prevB").onclick = function() 
+               {
+                 currentB--; if(currentB < 0) currentB = itemsB.length - 1; updateB(); 
+                 };
+ /* ------------------ */ /* Carousel C */ /* ------------------ */ 
+ const itemsC = 
+ [ 
+    { image: "images/button_3Dmodels.png", link: "none" }, 
+    { image: "images/button_ChristmasBaby.png", link: "models/christmasbaby.html" }, 
+    { image: "images/button_SpringBaby.png", link: "models/springbaby.html" }, 
+    { image: "images/buttons_Merpony.png", link: "models/merpony.html" }, 
+    { image: "images/buttons_SummerGirl.png", link: "models/summergirl.html" }, 
+    { image: "images/button_Sister1.png", link: "models/sister1.html" }, 
+    { image: "images/button_Sister2.png", link: "models/sister2.html" },
+    { image: "images/button_Sister3.png", link: "models/sister3.html" },  
+    ];
+     let currentC = 0; function updateC() 
+     { 
+        document.getElementById("contentC").src = itemsC[currentC].image; document.getElementById("linkC").href = itemsC[currentC].link; 
+     }
+      document.getElementById("nextC").onclick = function() 
+      { 
+        currentC = (currentC + 1) % itemsC.length; updateC(); 
+      }; 
+      document.getElementById("prevC").onclick = function() 
+      { 
+        currentC--; if(currentC < 0) currentC = itemsC.length - 1; updateC(); 
+      };
+       /* Initialize */ 
+       updateA(); 
+       updateB(); 
+       updateC(); 
+</script>
+
+</body>
+</html>
+```
