@@ -8,21 +8,23 @@
 <title>My Landing Page</title>
 
 <style>
-
 /* Remove browser margins */
+
 body {
     margin: 0;
     overflow: hidden;
 }
 
-/* Main container */
+/* Main page */
+
 .container {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-/* Background image */
+/* Background PNG */
+
 .background {
     width: 100%;
     height: 100%;
@@ -31,57 +33,109 @@ body {
 }
 
 /* Shared button settings */
+
 .button {
     position: absolute;
     cursor: pointer;
 }
 
-/* ===== REGULAR BUTTONS ===== */
+/* ========================= */
+/* REGULAR BUTTONS           */
+/* ========================= */
 
 #button1 {
-    left: 15%;
-    top: 25%;
-    width: 12%;
+    left: 10%;
+    top: 15%;
+    width: 10%;
 }
 
 #button2 {
-    left: 75%;
-    top: 25%;
-    width: 12%;
+    left: 80%;
+    top: 15%;
+    width: 10%;
 }
 
-/* ===== CAROUSEL ===== */
+/* ========================= */
+/* CAROUSEL A                */
+/* ========================= */
 
-#carousel {
+#carouselA {
     position: absolute;
 
-    left: 50%;
-    top: 75%;
+    left: 20%;
+    top: 70%;
 
     transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Arrow buttons */
+/* ========================= */
+/* CAROUSEL B                */
+/* ========================= */
+
+#carouselB {
+    position: absolute;
+
+    left: 50%;
+    top: 70%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ========================= */
+/* CAROUSEL C                */
+/* ========================= */
+
+#carouselC {
+    position: absolute;
+
+    left: 80%;
+    top: 70%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ========================= */
+/* ARROW BUTTONS             */
+/* ========================= */
+
 .arrow {
-    width: 60px;
+    width: 50px;
     cursor: pointer;
 }
 
-/* Center content button */
-#contentButton {
-    width: 250px;
-    cursor: pointer;
-}
+/* ========================= */
+/* CONTENT BUTTONS           */
+/* ========================= */
 
-#contentButton img {
-    width: 100%;
+#contentA {
+    width: 220px;
     display: block;
+    cursor: pointer;
 }
 
+#contentB {
+    width: 220px;
+    display: block;
+    cursor: pointer;
+}
+
+#contentC {
+    width: 220px;
+    display: block;
+    cursor: pointer;
+}
 </style>
 </head>
 
@@ -105,25 +159,6 @@ body {
              id="button2"
              class="button">
     </a>
-
-    <!-- CAROUSEL -->
-    <div id="carousel">
-
-        <img src="images/button_Previous.png"
-             id="prev"
-             class="arrow">
-
-        <a id="contentLink" href="#">
-            <div id="contentButton">
-                <img id="contentImage" src="">
-            </div>
-        </a>
-
-        <img src="images/button_Next.png"
-             id="next"
-             class="arrow">
-
-    </div>
 
 </div>
 
