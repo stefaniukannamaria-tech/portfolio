@@ -61,6 +61,7 @@ body {
 
 #carouselA {
     position: absolute;
+    z-index: 1;
 
     left: 20%;
     top: 70%;
@@ -69,7 +70,14 @@ body {
 
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0px;
+}
+#prevA {
+    margin-right: -20px;
+}
+
+#nextA {
+    margin-left: -20px;
 }
 
 /* ========================= */
@@ -78,6 +86,7 @@ body {
 
 #carouselB {
     position: absolute;
+    z-index: 1;
 
     left: 50%;
     top: 70%;
@@ -86,7 +95,14 @@ body {
 
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0px;
+}
+#prevB {
+    margin-right: -20px;
+}
+
+#nextB {
+    margin-left: -20px;
 }
 
 /* ========================= */
@@ -95,6 +111,7 @@ body {
 
 #carouselC {
     position: absolute;
+    z-index: 1;
 
     left: 80%;
     top: 70%;
@@ -103,7 +120,14 @@ body {
 
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0px;
+}
+#prevC {
+    margin-right: -20px;
+}
+
+#nextC {
+    margin-left: -20px;
 }
 
 /* ========================= */
@@ -111,8 +135,10 @@ body {
 /* ========================= */
 
 .arrow {
-    width: 50px;
+    width: 6vw;
     cursor: pointer;
+     position: relative;
+    z-index: 2;
 }
 
 /* ========================= */
@@ -120,19 +146,19 @@ body {
 /* ========================= */
 
 #contentA {
-    width: 220px;
+    width: 15vw;
     display: block;
     cursor: pointer;
 }
 
 #contentB {
-    width: 220px;
+    width: 15vw;
     display: block;
     cursor: pointer;
 }
 
 #contentC {
-    width: 220px;
+    width: 15vw;
     display: block;
     cursor: pointer;
 }
@@ -164,26 +190,26 @@ body {
 
 <!-- CAROUSEL A --> 
  <div id="carouselA"> 
-    <img id="prevA" src="images/prev.png"> 
+    <img id="prevA" class="arrow"src="images/prev.png"> 
     <a id="linkA" href="#"> <img id="contentA" src=""> 
     </a> 
-    <img id="nextA" src="images/next.png">
+    <img id="nextA" class="arrow"src="images/next.png">
  </div> 
  <!-- CAROUSEL B --> 
   <div id="carouselB"> 
-    <img id="prevB" src="images/prev.png">
+    <img id="prevB" class="arrow" src="images/prev.png">
      <a id="linkB" href="#"> 
         <img id="contentB" src="">
      </a> 
-     <img id="nextB" src="images/next.png"> 
+     <img id="nextB" class="arrow" src="images/next.png"> 
     </div>
      <!-- CAROUSEL C -->
        <div id="carouselC"> 
-        <img id="prevC" src="images/prev.png"> 
+        <img id="prevC" class="arrow" src="images/prev.png"> 
         <a id="linkC" href="#"> 
             <img id="contentC" src=""> 
         </a>
-         <img id="nextC" src="images/next.png"> 
+         <img id="nextC" class="arrow" src="images/next.png"> 
         </div>
          <script> 
          /* ------------------ */ /* Carousel A */ /* ------------------ */ 
